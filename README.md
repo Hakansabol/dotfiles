@@ -30,3 +30,12 @@ export PATH="$PATH:/mnt/c/ProgramData/chocolatey/lib/win32yank/tools"
 export C="/mnt/c/"
 export G="/mnt/c/Users/Hakan/Github/"
 ```
+
+## Omnisharp-Roslyn setup
+download the following file somewhere
+omnisharp roslyn 1.39.6 mono
+```
+sudo tar -xzf /*location-to-file*.tar.gz --directory /opt/lsp
+https://www.mono-project.com/docs/compiling-mono/linux/
+```
+The above is currently failing. Experimenting with Neovim in VSCode to see if that is more smooth.
