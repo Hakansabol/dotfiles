@@ -14,3 +14,19 @@ sudo apt install gzip cmake make gcc unzip
 git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
 sudo apt install python3.12-venv
 ```
+
+Install win32yank via elevated powershell
+```
+choco install win32yank -y
+```
+
+## .bashrc Setup
+```
+# PATH SETUP
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/mnt/c/ProgramData/chocolatey/lib/win32yank/tools"
+
+# EXTRAS
+export C="/mnt/c/"
+export G="/mnt/c/Users/Hakan/Github/"
+```
