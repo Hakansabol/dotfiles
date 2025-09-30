@@ -15,11 +15,6 @@ git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
 sudo apt install python3.12-venv
 ```
 
-Install win32yank via elevated powershell
-```
-choco install win32yank -y
-```
-
 ## .bashrc Setup
 ```
 # PATH SETUP
