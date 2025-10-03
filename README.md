@@ -1,9 +1,7 @@
 # windows install 
 ```
-choco install -y neovim git ripgrep wget fd unzip gzip mingw make
+choco install -y git ripgrep wget fd unzip gzip mingw make
 ```
-
-also install cmake via installer
 
 Treesitter may fail. If it does, run `:TSUninstall all` and then run `nvim` in cmd.exe
 
@@ -15,22 +13,27 @@ git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
 sudo apt install python3.12-venv
 ```
 
+# Neovim Install
+This config requires Neovim >=0.11.
+Package managers do not ship latest, so build it from source as specified:
+```https://github.com/neovim/neovim/blob/master/BUILD.md```
+
 ## .bashrc Setup
 ```
 # PATH SETUP
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:/mnt/c/ProgramData/chocolatey/lib/win32yank/tools"
-
-# EXTRAS
-export C="/mnt/c/"
-export G="/mnt/c/Users/Hakan/Github/"
 ```
 
-## Omnisharp-Roslyn setup
-download the following file somewhere
-omnisharp roslyn 1.39.6 mono
-```
-sudo tar -xzf /*location-to-file*.tar.gz --directory /opt/lsp
-https://www.mono-project.com/docs/compiling-mono/linux/
-```
-The above is currently failing. Experimenting with Neovim in VSCode to see if that is more smooth.
+# Roslyn LSP Setup
+https://github.com/dotnet/roslyn
+https://github.com/seblyng/roslyn.nvim
+
+1. Install dotnet latest
+https://dotnet.microsoft.com/en-us/download
+
+1a. Ensure `dotnet` command is available on PATH
+
+2. Install roslyn lsp via Mason
+```:MasonInstall roslyn```
+
+3. Open a `.cs` file. Test and debug via `:LspInfo` and/or `:LspLog`
