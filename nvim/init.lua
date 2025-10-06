@@ -927,5 +927,7 @@ require('lazy').setup({
 -- ROSLYN LSP
 require 'custom.lsp.roslyn'
 
+-- bindings
+require 'custom.keybinds.terminal'
 --vim.lsp.set_log_level 'debug'
 -- require 'custom.lsp.omnisharp'
