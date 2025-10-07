@@ -924,10 +924,10 @@ require('lazy').setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+require 'custom.config'
+
 -- ROSLYN LSP
 require 'custom.lsp.roslyn'
 
 -- bindings
 require 'custom.keybinds.terminal'
---vim.lsp.set_log_level 'debug'
--- require 'custom.lsp.omnisharp'
