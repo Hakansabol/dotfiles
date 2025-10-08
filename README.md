@@ -37,3 +37,13 @@ https://dotnet.microsoft.com/en-us/download
 ```:MasonInstall roslyn```
 
 3. Open a `.cs` file. Test and debug via `:LspInfo` and/or `:LspLog`
+
+# GDScript LSP Setup
+source: https://www.youtube.com/watch?v=B6UahV8gVo0
+Set `Auto Reload Scripts on External Change` to `On` in Godot > Editor Settings > Text Editor > Behavior >
+
+Windows Specific
+Install winget from Microsoft Store and run `winget install nmap`
+
+*nix Specific
+Install `netcat` via package manager (if it isn't already installed)
