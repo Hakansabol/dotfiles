@@ -45,5 +45,4 @@ Set `Auto Reload Scripts on External Change` to `On` in Godot > Editor Settings 
 Windows Specific
 Install winget from Microsoft Store and run `winget install nmap`
 
-*nix Specific
-Install `netcat` via package manager (if it isn't already installed)
+The LSP may not attach automatically. If it does not appear in `:LspInfo`, try running `:LspStart` while editing a `.gd` file.
