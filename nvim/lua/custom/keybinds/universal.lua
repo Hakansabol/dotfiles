@@ -1,4 +1,8 @@
-vim.keymap.set('n', '<leader>w', '<C-w>', { remap = true })
+-- windows with <leader>w instead of <C-w>
+vim.keymap.set('n', '<leader>w', '<C-w>', { remap = true, desc = '[W]indow Management' })
 
-vim.keymap.set('n', '<C-w> ', ':update<CR>')
-vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>')
+-- Leader binds for common commands
+vim.keymap.set('n', '<leader>u', ':bufdo update<CR>', { desc = '[U]pdate All' })
+vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit' })
+
+-- Autocomplete - See init.lua
