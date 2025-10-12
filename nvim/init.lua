@@ -656,13 +656,14 @@ require('lazy').setup({
   },
 })
 
--- CONFIG RULES
-require 'custom.config'
-
 -- PLUGINS
 require 'custom.plugins.roslyn'
 require 'custom.lsp.roslyn'
 require 'custom.plugins.oil'
+
+-- CONFIG RULES
+require 'custom.config'
+require 'custom.keybinds.oil'
 
 -- BINDINGS
 require 'custom.keybinds.terminal'
