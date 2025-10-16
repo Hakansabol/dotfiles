@@ -5,4 +5,5 @@ vim.keymap.set('n', '<leader>w', '<C-w>', { remap = true, desc = '[W]indow Manag
 vim.keymap.set('n', '<leader>u', ':bufdo update<CR>', { desc = '[U]pdate All' })
 vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit' })
 
--- Autocomplete - See init.lua
+-- open oil in %dir
+vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })

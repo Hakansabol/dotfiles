@@ -32,6 +32,17 @@ return { -- Fuzzy Finder (files, lsp, etc)
           ['<tab>'] = require('telescope.actions').cycle_previewers_prev,
         },
       },
+      defaults = {
+        file_ignore_patterns = {
+          '%.tmp', -- godot auto generated files
+          '%.tscn', -- godot scene files
+          '%.tres', -- godot resource files
+          '%.uid', -- godot script metadata files
+          '%.import', -- godot resource metadata files
+          '%.csproj', -- unity project files
+          '%.meta', -- unity metadata files
+        },
+      },
     }
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')

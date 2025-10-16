@@ -55,18 +55,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins you can run
---    :Lazy update
---
+-- :Lazy - Manage plugins
+-- :Lazy update - updates plugins
 require('lazy').setup({
-  require 'kickstart.guess-indent', -- Detect tabstop and shiftwidth automatically
+  require 'kickstart.guess-indent',
   require 'kickstart.gitsigns',
   require 'kickstart.which-key',
   require 'kickstart.telescope',
