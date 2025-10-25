@@ -75,6 +75,7 @@ require('lazy').setup({
 
   require 'plugins.roslyn',
   require 'plugins.oil',
+  require 'plugins.trouble',
   -- require 'kickstart.debug',
   -- require 'kickstart.lint',
   -- require 'kickstart.neo-tree',
