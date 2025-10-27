@@ -1,5 +1,3 @@
-# windows install 
-```
 choco install -y git ripgrep wget fd unzip gzip mingw make
 ```
 
@@ -8,21 +6,37 @@ Treesitter may fail. If it does, run `:TSUninstall all` and then run `nvim` in c
 # ubuntu via wsl install
 ```
 sudo apt upgrade
-sudo apt install gzip cmake make gcc unzip
+sudo apt install gzip cmake make gcc unzip python3.12-venv
 git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
-sudo apt install python3.12-venv
+```
+
+# Arch install
+```
+sudo pacman -S sof-firmware waybar otf-font-awesome
+
+mkdir ~/.config
+# install neovim dependencies
+sudo pacman -S gzip cmake make gcc ripgrep clang lua
+ln ~/dotfiles/nvim/ ~/.config/nvim -sd
+
+sudo pacman -S sudo git fastfetch 
+
+# install niri
+sudo pacman -S niri ghostty rofi fuzzel
+ln ~/dotfiles/niri/ ~/.config/niri -sd
+
+# more stuff
+sudo pacman -S dolphin firefox discord 
+
+# yazi + dependencies
+sudo yazi pacman -S ffmpeg jq poppler fd ripgrep fzf zoxide xclip
+ln ~/dotfiles/yazi/ ~/.config/yazi -sd
 ```
 
 # Neovim Install
 This config requires Neovim >=0.11.
-Package managers do not ship latest, so build it from source as specified:
+Package managers may not ship latest, so build it from source as specified:
 ```https://github.com/neovim/neovim/blob/master/BUILD.md```
-
-## .bashrc Setup
-```
-# PATH SETUP
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-```
 
 # Roslyn LSP Setup
 https://github.com/dotnet/roslyn
