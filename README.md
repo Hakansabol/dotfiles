@@ -12,7 +12,8 @@ git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
 
 # Arch install
 ```
-sudo pacman -S sof-firmware waybar otf-font-awesome
+sudo pacman -S vi vim nano git networkmanager neovim 
+sudo pacman -S sof-firmware waybar otf-font-awesome xorg-server brightnessctl dialog font-manager
 
 mkdir ~/.config
 # install neovim dependencies
@@ -22,15 +23,21 @@ ln ~/dotfiles/nvim/ ~/.config/nvim -sd
 sudo pacman -S sudo git fastfetch 
 
 # install niri
-sudo pacman -S niri ghostty rofi fuzzel
+sudo pacman -S niri ghostty rofi fuzzel swww libinput mako waybar xwayland-sattelite
 ln ~/dotfiles/niri/ ~/.config/niri -sd
 
 # more stuff
 sudo pacman -S dolphin firefox discord 
 
 # yazi + dependencies
-sudo yazi pacman -S ffmpeg jq poppler fd ripgrep fzf zoxide xclip
+sudo yazi pacman -S ffmpeg jq poppler fd ripgrep fzf zoxide xclip 7zip
 ln ~/dotfiles/yazi/ ~/.config/yazi -sd
+
+# ghostty setup
+sudo pacman -S starship zsh
+rm ~/.bashrc
+ln ~/dotfiles/.bashrc ~/.bashrc -s
+ln ~/dotfiles/.zshrc ~/.zshrc -s
 ```
 
 # Neovim Install
