@@ -7,3 +7,7 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 
 -- open oil in %dir
 vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })
+
+vim.api.nvim_create_user_command('Themes', function()
+  vim.cmd 'Telescope colorscheme'
+end, {})

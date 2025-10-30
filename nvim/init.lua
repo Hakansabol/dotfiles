@@ -2,11 +2,11 @@
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-	local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
-	if vim.v.shell_error ~= 0 then
-		error('Error cloning lazy.nvim:\n' .. out)
-	end
+  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+  if vim.v.shell_error ~= 0 then
+    error('Error cloning lazy.nvim:\n' .. out)
+  end
 end
 
 vim.g.have_nerd_font = true
@@ -44,11 +44,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking (copying) text',
-	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-	callback = function()
-		vim.hl.on_yank()
-	end,
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
 })
 
 ---@type vim.Option
@@ -58,49 +58,50 @@ rtp:prepend(lazypath)
 -- :Lazy - Manage plugins
 -- :Lazy update - updates plugins
 require('lazy').setup({
-	require 'kickstart.guess-indent',
-	require 'kickstart.gitsigns',
-	require 'kickstart.which-key',
-	require 'kickstart.telescope',
-	require 'kickstart.lazydev',
-	require 'kickstart.nvim-lspconfig',
-	require 'kickstart.conform',
-	require 'kickstart.blink',
-	require 'kickstart.midnight',
-	require 'kickstart.todo-comments',
-	require 'kickstart.mini',
-	require 'kickstart.nvim-treesitter',
-	require 'kickstart.indent_line',
-	require 'kickstart.autopairs',
+  require 'kickstart.guess-indent',
+  require 'kickstart.gitsigns',
+  require 'kickstart.which-key',
+  require 'kickstart.telescope',
+  require 'kickstart.lazydev',
+  require 'kickstart.nvim-lspconfig',
+  require 'kickstart.conform',
+  require 'kickstart.blink',
+  require 'kickstart.todo-comments',
+  require 'kickstart.mini',
+  require 'kickstart.nvim-treesitter',
+  require 'kickstart.indent_line',
+  require 'kickstart.autopairs',
+  require 'kickstart.midnight',
+  require 'kickstart.jellybeans',
 
-	require 'plugins.roslyn',
-	require 'plugins.oil',
-	require 'plugins.trouble',
-	require 'plugins.hop',
-	-- require 'kickstart.debug',
-	-- require 'kickstart.lint',
-	-- require 'kickstart.neo-tree',
+  require 'plugins.roslyn',
+  require 'plugins.oil',
+  require 'plugins.trouble',
+  require 'plugins.hop',
+  -- require 'kickstart.debug',
+  -- require 'kickstart.lint',
+  -- require 'kickstart.neo-tree',
 }, {
-	ui = {
-		-- If you are using a Nerd Font: set icons to an empty table which will use the
-		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-		icons = vim.g.have_nerd_font and {} or {
-			cmd = '⌘',
-			config = '🛠',
-			event = '📅',
-			ft = '📂',
-			init = '⚙',
-			keys = '🗝',
-			plugin = '🔌',
-			runtime = '💻',
-			require = '🌙',
-			source = '📄',
-			start = '🚀',
-			task = '📌',
-			lazy = '💤 ',
-		},
-		backdrop = 100,
-	},
+  ui = {
+    -- If you are using a Nerd Font: set icons to an empty table which will use the
+    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+    icons = vim.g.have_nerd_font and {} or {
+      cmd = '⌘',
+      config = '🛠',
+      event = '📅',
+      ft = '📂',
+      init = '⚙',
+      keys = '🗝',
+      plugin = '🔌',
+      runtime = '💻',
+      require = '🌙',
+      source = '📄',
+      start = '🚀',
+      task = '📌',
+      lazy = '💤 ',
+    },
+    backdrop = 100,
+  },
 })
 
 -- PLUGIN SETUP
