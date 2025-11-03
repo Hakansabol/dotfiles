@@ -9,3 +9,5 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })
 
 vim.g.clipboard = "wl-copy"
+
+vim.api.nvim_create_user_command('Themes', function() vim.cmd 'Telescope colorscheme' end, {})
