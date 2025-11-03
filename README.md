@@ -13,11 +13,11 @@ git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
 # Arch install
 ```
 sudo pacman -S vi vim nano git networkmanager neovim 
-sudo pacman -S sof-firmware waybar otf-font-awesome xorg-server brightnessctl dialog font-manager
+sudo pacman -S sof-firmware waybar otf-font-awesome xorg-server brightnessctl dialog font-manager mako
 
 mkdir ~/.config
 # install neovim dependencies
-sudo pacman -S gzip cmake make gcc ripgrep clang lua
+sudo pacman -S gzip cmake make gcc ripgrep clang lua xclip wl-clipboard
 ln ~/dotfiles/nvim/ ~/.config/nvim -sd
 
 sudo pacman -S sudo git fastfetch 

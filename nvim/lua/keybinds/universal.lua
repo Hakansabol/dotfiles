@@ -7,3 +7,5 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 
 -- open oil in %dir
 vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })
+
+vim.g.clipboard = "wl-copy"
