@@ -1,3 +1,7 @@
+-- better wrapping
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+
 -- windows with <leader>w instead of <C-w>
 vim.keymap.set('n', '<leader>w', '<C-w>', { remap = true, desc = '[W]indow Management' })
 
@@ -8,6 +12,10 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 -- open oil in %dir
 vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })
 
-vim.g.clipboard = "wl-copy"
+vim.g.clipboard = 'wl-copy'
 
-vim.api.nvim_create_user_command('Themes', function() vim.cmd 'Telescope colorscheme' end, {})
+vim.api.nvim_create_user_command('Themes', function()
+  vim.cmd 'Telescope colorscheme'
+end, {})
+
+vim.g.neoterm_default_mod = 'vertical'

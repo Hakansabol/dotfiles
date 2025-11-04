@@ -78,6 +78,7 @@ require('lazy').setup({
   require 'plugins.oil',
   require 'plugins.trouble',
   require 'plugins.hop',
+  require 'plugins.neoterm',
   -- require 'kickstart.debug',
   -- require 'kickstart.lint',
   -- require 'kickstart.neo-tree',
@@ -110,6 +111,7 @@ require 'lsp.roslyn'
 -- CONFIG RULES
 require 'config'
 require 'keybinds.oil'
+require 'keybinds.c++'
 
 -- BINDINGS
 require 'keybinds.terminal'

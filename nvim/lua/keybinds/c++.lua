@@ -1,0 +1,7 @@
+-- Tools for working with c++
+function compile_and_run_cpp()
+  vim.api.nvim_command 'T g++ % -std=c++23'
+  vim.api.nvim_command 'T ./a.out'
+end
+
+vim.keymap.set('n', '<leader>rC', compile_and_run_cpp, {})
