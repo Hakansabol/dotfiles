@@ -366,7 +366,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
     Mod+Tab hotkey-overlay-title="Find an Open Application: rofi" { spawn-sh "rofi -show window"; }
     Mod+Space hotkey-overlay-title="Find an Open Application: rofi" { spawn-sh "rofi -show window"; }
-    Mod+S hotkey-overlay-title="Sleep" { spawn-sh "systemctl suspend"; }
+    // Mod+S hotkey-overlay-title="Sleep" { spawn-sh "systemctl suspend"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
