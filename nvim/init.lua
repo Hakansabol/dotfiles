@@ -112,6 +112,7 @@ require 'lsp.roslyn'
 require 'config'
 require 'keybinds.oil'
 require 'keybinds.c++'
+require 'keybinds.java'
 
 -- BINDINGS
 require 'keybinds.terminal'
