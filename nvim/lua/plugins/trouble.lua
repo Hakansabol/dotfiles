@@ -1,8 +1,16 @@
 return {
   'folke/trouble.nvim',
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {
+    warn_no_results = false,
+    open_no_results = true,
+  }, -- for default options, refer to the configuration section for custom setup.
   cmd = 'Trouble',
   keys = {
+    {
+      '<leader>ce',
+      '<cmd>Trouble diagnostics toggle filter = { severity=vim.diagnostic.severity.ERROR }<cr>',
+      desc = 'Errors (Trouble)',
+    },
     {
       '<leader>xx',
       '<cmd>Trouble diagnostics toggle<cr>',
