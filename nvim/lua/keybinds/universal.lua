@@ -19,4 +19,14 @@ vim.api.nvim_create_user_command('Themes', function()
   vim.cmd 'Telescope colorscheme'
 end, {})
 
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Execute [C]ode [A]ction' })
+vim.keymap.set('n', 's', require('hop').hint_words, { desc = 'Hop' })
+
 vim.g.neoterm_default_mod = 'vertical'
+
+local ls = require 'luasnip'
+vim.keymap.set({ 'i', 's' }, '<C-q>', function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })

@@ -25,10 +25,11 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
+vim.o.foldmethod = 'indent'
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -58,30 +59,28 @@ rtp:prepend(lazypath)
 -- :Lazy - Manage plugins
 -- :Lazy update - updates plugins
 require('lazy').setup({
-  require 'kickstart.guess-indent',
-  require 'kickstart.gitsigns',
-  require 'kickstart.which-key',
-  require 'kickstart.telescope',
-  require 'kickstart.lazydev',
-  require 'kickstart.nvim-lspconfig',
-  require 'kickstart.conform',
-  require 'kickstart.blink',
-  require 'kickstart.todo-comments',
-  require 'kickstart.mini',
-  require 'kickstart.nvim-treesitter',
-  require 'kickstart.indent_line',
-  require 'kickstart.autopairs',
-  require 'kickstart.midnight',
-  require 'kickstart.jellybeans',
+  require 'plugins.guess-indent',
+  require 'plugins.gitsigns',
+  require 'plugins.which-key',
+  require 'plugins.telescope',
+  require 'plugins.lazydev',
+  require 'plugins.nvim-lspconfig',
+  require 'plugins.conform',
+  require 'plugins.blink',
+  require 'plugins.todo-comments',
+  require 'plugins.mini',
+  require 'plugins.nvim-treesitter',
+  require 'plugins.indent_line',
+  require 'plugins.autopairs',
+
+  require 'plugins.midnight',
+  require 'plugins.jellybeans',
 
   require 'plugins.roslyn',
   require 'plugins.oil',
   require 'plugins.trouble',
   require 'plugins.hop',
   require 'plugins.neoterm',
-  -- require 'kickstart.debug',
-  -- require 'kickstart.lint',
-  -- require 'kickstart.neo-tree',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -117,3 +116,9 @@ require 'keybinds.java'
 -- BINDINGS
 require 'keybinds.terminal'
 require 'keybinds.universal'
+
+-- SNIPS
+require 'snips'
+
+-- THEME
+vim.cmd.colorscheme 'midnight'
