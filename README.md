@@ -1,43 +1,10 @@
-choco install -y git ripgrep wget fd unzip gzip mingw make
-```
-
-Treesitter may fail. If it does, run `:TSUninstall all` and then run `nvim` in cmd.exe
-
-# ubuntu via wsl install
-```
-sudo apt upgrade
-sudo apt install gzip cmake make gcc unzip python3.12-venv
-git clone https://github.com/Hakansabol/dotfiles ~/dotfiles/
-```
-
 # Arch install
 ```
-sudo pacman -S vi vim nano git networkmanager neovim 
-sudo pacman -S sof-firmware waybar otf-font-awesome xorg-server brightnessctl dialog font-manager mako
-
-mkdir ~/.config
-# install neovim dependencies
-sudo pacman -S gzip cmake make gcc ripgrep clang lua xclip wl-clipboard
-ln ~/dotfiles/nvim/ ~/.config/nvim -sd
-
-sudo pacman -S sudo git fastfetch 
-
-# install niri
-sudo pacman -S niri ghostty rofi fuzzel swww libinput mako waybar xwayland-sattelite
-ln ~/dotfiles/niri/ ~/.config/niri -sd
-
-# more stuff
-sudo pacman -S dolphin firefox discord 
-
-# yazi + dependencies
-sudo yazi pacman -S ffmpeg jq poppler fd ripgrep fzf zoxide xclip 7zip
-ln ~/dotfiles/yazi/ ~/.config/yazi -sd
-
-# ghostty setup
-sudo pacman -S starship zsh
-rm ~/.bashrc
-ln ~/dotfiles/.bashrc ~/.bashrc -s
-ln ~/dotfiles/.zshrc ~/.zshrc -s
+sudo pacman -Sy git
+su user
+git clone https://github.com/hakansabol/dotfiles
+chmod -x ~/dotfiles/install.sh
+~/dotfiles/install.sh
 ```
 
 # Neovim Install
