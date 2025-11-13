@@ -103,13 +103,16 @@
 		"interval": 5,
 		"format": "CPU {usage:2}%"
 	},
+        "format": "{capacity}% {icon}",
 	"battery": {
 		"states": {
 			"good": 95,
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",
+		"format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-full": "{capacity}% {icon}",
 		"format-icons": [
 			"",
 			"",
