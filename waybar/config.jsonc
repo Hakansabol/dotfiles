@@ -5,6 +5,8 @@
 	"position": "top",
 
 	"modules-left": [
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
 		"memory",
 		"custom/right-arrow-dark",
 		"custom/right-arrow-light",
