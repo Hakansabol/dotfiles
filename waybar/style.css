@@ -4,18 +4,25 @@
 }
 
 window#waybar {
-	background: #292b2e;
+	background: rgba(0,0,0,0.4);
 	color: #fdf6e3;
 }
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
 	color: #1a1a1a;
+	background: rgba(60,60,120,1);
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #292b2e;
+	color: rgba(60,60,120,1);
 	background: #1a1a1a;
+}
+
+#custom-right-arrow-cap,
+#custom-left-arrow-cap {
+	color: #1a1a1a;
+	background: rgba(0,0,0,0.0);
 }
 
 #clock.1,

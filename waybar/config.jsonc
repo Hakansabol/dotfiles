@@ -5,6 +5,7 @@
 	"position": "top",
 
 	"modules-left": [
+		"niri-workspaces",
 		"custom/right-arrow-dark",
 		"custom/right-arrow-light",
 		"memory",
@@ -14,10 +15,10 @@
 		"custom/right-arrow-dark",
 		"custom/right-arrow-light",
 		"disk",
-		"custom/right-arrow-dark",
+		"custom/right-arrow-cap",
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
+		"custom/left-arrow-cap",
 		"clock#1",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -25,10 +26,10 @@
 		"custom/right-arrow-dark",
 		"custom/right-arrow-light",
 		"clock#3",
-		"custom/right-arrow-dark"
+		"custom/right-arrow-cap"
 	],
 	"modules-right": [
-		"custom/left-arrow-dark",
+		"custom/left-arrow-cap",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -54,6 +55,15 @@
 		"tooltip": false
 	},
 	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left-arrow-cap": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-cap": {
 		"format": "",
 		"tooltip": false
 	},
