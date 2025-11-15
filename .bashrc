@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 PS1='[\u@\h \W]\$ '
 
-alias z='cd'
+alias cd='z'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
