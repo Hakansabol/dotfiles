@@ -33,6 +33,9 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"backlight",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"network",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -145,5 +148,10 @@
     },
 	"tray": {
 		"icon-size": 20
-	}
+	},
+	"backlight": {
+        // "device": "acpi_video1",
+        "format": " {icon} {percent}% ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
 }

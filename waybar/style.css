@@ -35,6 +35,7 @@ window#waybar {
 #pulseaudio,
 #battery,
 #network,
+#backlight,
 #tray {
 	background: #1a1a1a;
 }
@@ -58,6 +59,9 @@ window#waybar {
 
 #pulseaudio {
 	color: #268bd2;
+}
+#backlight {
+	color: #aaaa20;
 }
 #memory {
 	color: #2aa198;
