@@ -111,6 +111,7 @@ require 'lsp.roslyn'
 require 'config'
 require 'keybinds.oil'
 require 'keybinds.c++'
+require 'keybinds.python'
 require 'keybinds.java'
 
 -- BINDINGS
