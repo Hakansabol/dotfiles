@@ -30,3 +30,5 @@ vim.keymap.set({ 'i', 's' }, '<C-q>', function()
     ls.expand_or_jump()
   end
 end, { silent = true })
+
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
