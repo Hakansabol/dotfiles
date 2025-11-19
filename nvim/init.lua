@@ -28,7 +28,6 @@ vim.o.list = true
 vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
-vim.o.foldmethod = 'indent'
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
@@ -81,6 +80,7 @@ require('lazy').setup({
   require 'plugins.trouble',
   require 'plugins.hop',
   require 'plugins.neoterm',
+  require 'plugins.competitest',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -115,8 +115,9 @@ require 'keybinds.python'
 require 'keybinds.java'
 
 -- BINDINGS
-require 'keybinds.terminal'
 require 'keybinds.universal'
+require 'keybinds.terminal'
+require 'keybinds.codeforces'
 
 -- SNIPS
 require 'snips'

@@ -1,0 +1,2 @@
+vim.keymap.set('n', '<leader>rt', ':CompetiTest add_testcase<CR>', { desc = 'CompetiTest: Add [T]estcase' })
+vim.keymap.set('n', '<leader>rr', ':CompetiTest run<CR>', { desc = 'CompetiTest: [R]un Testcases' })
