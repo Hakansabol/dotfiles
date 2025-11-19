@@ -41,6 +41,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
           '%.import', -- godot resource metadata files
           '%.csproj', -- unity project files
           '%.meta', -- unity metadata files
+          '%.asset', -- unity asset files
         },
       },
     }

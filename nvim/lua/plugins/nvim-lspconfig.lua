@@ -193,7 +193,7 @@ return {
       -- (`winget install nmap`)
       gdscript_config['cmd'] = { 'ncat', 'localhost', os.getenv 'GDScript_Port' or '6005' }
     else
-      gdscript_config['cmd'] = { 'nc', 'localhost', os.getenv 'GDScript_Port' or '6005' }
+      gdscript_config['cmd'] = { 'ncat', 'localhost', os.getenv 'GDScript_Port' or '6005' }
     end
     vim.lsp.config('gdscript', gdscript_config)
   end,
