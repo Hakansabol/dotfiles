@@ -66,6 +66,9 @@ sudo pacman --noconfirm -S firefox
 sudo pacman --noconfirm -S fd
 sudo pacman --noconfirm -S starship
 
+sudo systemctl enable --now dhcpcd
+sudo systemctl enable --now NetworkManager
+
 # link configuration
 mkdir ~/.config
 ln ~/dotfiles/nvim/ ~/.config/nvim -sd
