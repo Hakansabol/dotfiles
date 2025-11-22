@@ -1,70 +1,70 @@
 # pre install essentials
-sudo pacman -Sy sudo
-sudo pacman -Sy vi
-sudo pacman -Sy vim
-sudo pacman -Sy nano
-sudo pacman -Sy git
-sudo pacman -Sy linux-firmware
-sudo pacman -Sy dhcpcd
-sudo pacman -Sy networkmanager
-sudo pacman -Sy base-devel
-sudo pacman -Sy less
-sudo pacman -Sy which
+sudo pacman --noconfirm -S sudo
+sudo pacman --noconfirm -S vi
+sudo pacman --noconfirm -S vim
+sudo pacman --noconfirm -S nano
+sudo pacman --noconfirm -S git
+sudo pacman --noconfirm -S linux-firmware
+sudo pacman --noconfirm -S dhcpcd
+sudo pacman --noconfirm -S networkmanager
+sudo pacman --noconfirm -S base-devel
+sudo pacman --noconfirm -S less
+sudo pacman --noconfirm -S which
 # install fonts
-sudo pacman -Sy noto-fonts
-sudo pacman -Sy noto-fonts-cjk
-sudo pacman -Sy otf-font-awesome
+sudo pacman --noconfirm -S noto-fonts
+sudo pacman --noconfirm -S noto-fonts-cjk
+sudo pacman --noconfirm -S otf-font-awesome
 # install niri
-sudo pacman -Sy xdg-desktop-portal-gnome
-sudo pacman -Sy niri
-sudo pacman -Sy ghostty
-sudo pacman -Sy rofi
-sudo pacman -Sy fuzzel
-sudo pacman -Sy swww
-sudo pacman -Sy libinput
-sudo pacman -Sy mako
-sudo pacman -Sy waybar
-sudo pacman -Sy xwayland-sattelite
-sudo pacman -Sy sof-firmware
-sudo pacman -Sy waybar
-sudo pacman -Sy xorg-server
-sudo pacman -Sy brightnessctl
-sudo pacman -Sy dialog
-sudo pacman -Sy font-manager
-sudo pacman -Sy fastfetch
-sudo pacman -Sy pulseaudio
-sudo pacman -Sy dolphin
+sudo pacman --noconfirm -S xdg-desktop-portal-gnome
+sudo pacman --noconfirm -S niri
+sudo pacman --noconfirm -S ghostty
+sudo pacman --noconfirm -S rofi
+sudo pacman --noconfirm -S fuzzel
+sudo pacman --noconfirm -S swww
+sudo pacman --noconfirm -S libinput
+sudo pacman --noconfirm -S mako
+sudo pacman --noconfirm -S waybar
+sudo pacman --noconfirm -S xwayland-sattelite
+sudo pacman --noconfirm -S sof-firmware
+sudo pacman --noconfirm -S waybar
+sudo pacman --noconfirm -S xorg-server
+sudo pacman --noconfirm -S brightnessctl
+sudo pacman --noconfirm -S dialog
+sudo pacman --noconfirm -S font-manager
+sudo pacman --noconfirm -S fastfetch
+sudo pacman --noconfirm -S pulseaudio
+sudo pacman --noconfirm -S dolphin
 # install neovim
-sudo pacman -Sy neovim
-sudo pacman -Sy gzip
-sudo pacman -Sy cmake
-sudo pacman -Sy make
-sudo pacman -Sy gcc
-sudo pacman -Sy ripgrep
-sudo pacman -Sy clang
-sudo pacman -Sy lua
-sudo pacman -Sy xclip
-sudo pacman -Sy wl-clipboard
-sudo pacman -Sy unzip
-sudo pacman -Sy nmap
+sudo pacman --noconfirm -S neovim
+sudo pacman --noconfirm -S gzip
+sudo pacman --noconfirm -S cmake
+sudo pacman --noconfirm -S make
+sudo pacman --noconfirm -S gcc
+sudo pacman --noconfirm -S ripgrep
+sudo pacman --noconfirm -S clang
+sudo pacman --noconfirm -S lua
+sudo pacman --noconfirm -S xclip
+sudo pacman --noconfirm -S wl-clipboard
+sudo pacman --noconfirm -S unzip
+sudo pacman --noconfirm -S nmap
 # install extras
-sudo pacman -Sy yazi
-sudo pacman -Sy zsh
-sudo pacman -Sy ffmpeg
-sudo pacman -Sy jq
-sudo pacman -Sy poppler
-sudo pacman -Sy fd
-sudo pacman -Sy ripgrep
-sudo pacman -Sy fzf
-sudo pacman -Sy zoxide
-sudo pacman -Sy xclip
-sudo pacman -Sy 7zip
-sudo pacman -Sy python
-sudo pacman -Sy python-pip
-sudo pacman -Sy man-db
-sudo pacman -Sy firefox
-sudo pacman -Sy fd
-sudo pacman -Sy starship
+sudo pacman --noconfirm -S yazi
+sudo pacman --noconfirm -S zsh
+sudo pacman --noconfirm -S ffmpeg
+sudo pacman --noconfirm -S jq
+sudo pacman --noconfirm -S poppler
+sudo pacman --noconfirm -S fd
+sudo pacman --noconfirm -S ripgrep
+sudo pacman --noconfirm -S fzf
+sudo pacman --noconfirm -S zoxide
+sudo pacman --noconfirm -S xclip
+sudo pacman --noconfirm -S 7zip
+sudo pacman --noconfirm -S python
+sudo pacman --noconfirm -S python-pip
+sudo pacman --noconfirm -S man-db
+sudo pacman --noconfirm -S firefox
+sudo pacman --noconfirm -S fd
+sudo pacman --noconfirm -S starship
 
 # link configuration
 mkdir ~/.config
