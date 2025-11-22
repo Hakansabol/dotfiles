@@ -1,0 +1,9 @@
+[Unit]
+Description=Change keycodes at boot
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/setkeycodes 3a 1
+
+[Install]
+WantedBy=multi-user.target
