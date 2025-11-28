@@ -124,3 +124,4 @@ require 'snips'
 
 -- THEME
 vim.cmd.colorscheme 'midnight'
+vim.cmd 'hi Normal guibg=#000000'
