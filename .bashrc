@@ -10,6 +10,7 @@ alias cd='z'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 . "$HOME/.cargo/env"
 
