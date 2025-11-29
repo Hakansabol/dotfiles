@@ -81,4 +81,4 @@ ln ~/dotfiles/ghostty/ ~/.config/ghostty -sd
 rm ~/.bashrc
 ln ~/dotfiles/.bashrc ~/.bashrc -s
 ln ~/dotfiles/.zshrc ~/.zshrc -s
-ln ~/dotfiles/starship.toml ~/.config/starship.toml
+ln ~/dotfiles/starship.toml ~/.config/starship.toml -s
