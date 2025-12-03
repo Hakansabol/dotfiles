@@ -32,3 +32,8 @@ vim.keymap.set({ 'i', 's' }, '<C-q>', function()
 end, { silent = true })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+-- diagnostics navigation
+vim.keymap.set('n', 'gd', function()
+  vim.diagnostic.jump { count = 1, float = true }
+end, { desc = '[G]oto [D]iagnostic' })
