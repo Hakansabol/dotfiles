@@ -76,6 +76,7 @@ ln ~/dotfiles/niri/ ~/.config/niri -sd
 ln ~/dotfiles/yazi/ ~/.config/yazi -sd
 ln ~/dotfiles/waybar/ ~/.config/waybar -sd
 ln ~/dotfiles/ghostty/ ~/.config/ghostty -sd
+ln ~/dotfiles/fuzzel/ ~/.config/fuzzel -sd
 
 # ghostty setup
 rm ~/.bashrc

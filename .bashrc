@@ -19,3 +19,8 @@ setwallpaper() {
 	echo "$1" > ~/dotfiles/.wallpaper
 	swww img $(cat ~/dotfiles/.wallpaper)
 }
+
+# github clone
+gits() {
+	git status
+}
