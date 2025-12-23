@@ -114,7 +114,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 0
+    gaps 2
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -159,10 +159,9 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        off
 
         // How many logical pixels the ring extends out from the windows.
-        width 3
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -259,14 +258,13 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+        // left 5
+        // right 5
+        // top 0
+        // bottom 0
     }
 }
 
-spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "swww img $(cat ~/dotfiles/.wallpaper)"
@@ -569,13 +567,13 @@ binds {
 
 window-rule {
 	match is-focused=false
-	opacity 0.7
+	opacity 0.76
 	draw-border-with-background false
 }
 
 window-rule {
 	match is-focused=true
-	opacity 1.0
+	opacity 0.92
 	draw-border-with-background false
 }
 
