@@ -26,4 +26,32 @@ ls.add_snippets('cpp', {
   ),
   ls.parser.parse_snippet(',codeforces', '\nint t;\ncin >> t;\nwhile (t--) {\n\t$1\n}\n'),
   ls.parser.parse_snippet('fori', 'for (int i = 0; i < ${1:n}; i++)\n{\n\t$2\n}'),
+
+  ls.parser.parse_snippet(
+    ',eratosthenes',
+    [[
+
+		vector<int> tprimes {};
+		vector<bool> sieve($1+1,true);
+		for (int i = 2 ; i <= $1 ; i ++) {
+			if (sieve[i]) {
+				tprimes.push_back(i);
+				for (int j = i ; j <= $1 ; j += i) sieve[j] = false;
+			}
+		}
+			]]
+  ),
+
+  ls.parser.parse_snippet(
+    ',ispalindrome',
+    [[
+    bool isPalindrome(string s) {
+        int n = s.size();
+        for (int i = 0 ; i <= n / 2 ; i ++) {
+            if (s[i] != s[n-i-1]) return false;
+        }
+        return true;
+    }
+			]]
+  ),
 })
