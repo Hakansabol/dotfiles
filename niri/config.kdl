@@ -132,6 +132,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 0.744186
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
@@ -311,7 +312,6 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
-    Mod+Tab hotkey-overlay-title="Find an Open Application: rofi" { spawn-sh "rofi -show window"; }
     Mod+Space hotkey-overlay-title="Find an Open Application: rofi" { spawn-sh "rofi -show window"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -567,13 +567,13 @@ binds {
 
 window-rule {
 	match is-focused=false
-	opacity 0.76
+	opacity 0.79
 	draw-border-with-background false
 }
 
 window-rule {
 	match is-focused=true
-	opacity 0.92
+	opacity 0.96
 	draw-border-with-background false
 }
 

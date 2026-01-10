@@ -24,3 +24,11 @@ setwallpaper() {
 gits() {
 	git status
 }
+
+convert_to_dvr() {
+	ffmpeg -i $1 -c:v dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p -c:a alac $2
+}
+
+dvr() {
+	/opt/resolve/bin/resolve
+}
