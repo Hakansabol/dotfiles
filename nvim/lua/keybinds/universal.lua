@@ -30,8 +30,14 @@ vim.keymap.set({ 'i', 's' }, '<C-q>', function()
     ls.expand_or_jump()
   end
 end, { silent = true })
+vim.keymap.set({ 'i', 's' }, '<C-j>', function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('i', '<Tab>', '<Tab>', { remap = false })
 
 -- diagnostics navigation
 vim.keymap.set('n', 'gd', function()
