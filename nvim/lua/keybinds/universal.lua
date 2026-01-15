@@ -11,7 +11,6 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 
 -- open oil in %dir
 vim.keymap.set('n', '-', ':Oil<CR>', { desc = 'Open [O]il' })
-vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open [O]il' })
 
 vim.g.clipboard = 'wl-copy'
 
@@ -25,14 +24,24 @@ vim.keymap.set('n', 's', require('hop').hint_words, { desc = 'Hop' })
 vim.g.neoterm_default_mod = 'vertical'
 
 local ls = require 'luasnip'
-vim.keymap.set({ 'i', 's' }, '<C-q>', function()
+-- Luanip jump forwards legacy
+vim.keymap.set({ 'i', 's' }, '<c-q>', function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
   end
 end, { silent = true })
-vim.keymap.set({ 'i', 's' }, '<C-j>', function()
+
+-- Luasnip jump forwards with <C-h>
+vim.keymap.set({ 'i', 's' }, '<c-h>', function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
+  end
+end, { silent = true })
+
+-- Luasnip jump backwards with <C-H>
+vim.keymap.set({ 'i', 's' }, '<c-s-h>', function()
+  if ls.jumpable(-1) then
+    ls.jump(-1)
   end
 end, { silent = true })
 

@@ -12,7 +12,6 @@ alias grep='grep --color=auto'
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
-. "$HOME/.cargo/env"
 
 # wallpaper select
 setwallpaper() {
