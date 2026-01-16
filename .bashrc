@@ -31,3 +31,12 @@ convert_to_dvr() {
 dvr() {
 	/opt/resolve/bin/resolve
 }
+
+bar() {
+	if ps -e | grep waybar > /dev/null
+	then
+		pkill waybar
+	else
+		waybar & disown
+	fi
+}

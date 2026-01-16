@@ -312,6 +312,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
+    Mod+U hotkey-overlay-title="Toggle a process: waybar" { spawn "~/dotfiles/scripts/bar.sh"; }
     Mod+Space hotkey-overlay-title="Find an Open Application: rofi" { spawn-sh "rofi -show window"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -390,8 +391,8 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    //Mod+U              { focus-workspace-down; }
+    //Mod+I              { focus-workspace-up; }
     Mod+N              { focus-workspace-down; }
     Mod+M              { focus-workspace-up; }
     Mod+Shift+Page_Down { move-column-to-workspace-down; }
