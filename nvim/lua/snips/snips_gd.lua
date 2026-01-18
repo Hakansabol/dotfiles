@@ -2,6 +2,38 @@ local ls = require 'luasnip'
 
 ls.add_snippets('gdscript', {
   -- Variables, Exports
+  -- [V]ariable [I]nteger
+  ls.parser.parse_snippet(
+    'vi',
+    [[
+	var ${1:name}: int = ${2:0}
+	]]
+  ),
+  -- [V]ariable [F]loat
+  ls.parser.parse_snippet(
+    'vf',
+    [[
+	var ${1:name}: float = ${2:0.0}
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'vb',
+    [[
+	var ${1:name}: bool = ${2:false}
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'vv2',
+    [[
+	var ${1:name}: Vector2 = Vector2(${2:0},${3:0})
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'vv3',
+    [[
+	var ${1:name}: Vector3 = Vector3(${2:0},${3:0},${3:0})
+	]]
+  ),
   -- [Ex]port [V]ariable
   ls.parser.parse_snippet(
     'ex',

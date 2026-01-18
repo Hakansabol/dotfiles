@@ -70,6 +70,14 @@ ls.add_snippets('cpp', {
 	]]
   ),
 
+  -- push space
+  ls.parser.parse_snippet(
+    "''",
+    [[
+	<< ' ' << 
+	]]
+  ),
+
   -- Control
 
   -- [For] [i] in range
