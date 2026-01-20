@@ -62,4 +62,24 @@ ls.add_snippets('gdscript', {
 	@export_tool_button("${1:label}", "Callable") var ${2:name} = ${3:callable}
 	]]
   ),
+
+  -- Methods
+  ls.parser.parse_snippet(
+    'ac',
+    [[
+	Input.is_action_pressed("${1:action}")
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'acj',
+    [[
+	Input.is_action_just_pressed("${1:action}")
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'vmouse',
+    [[
+	var mouse_position := get_viewport().get_mouse_position()
+	]]
+  ),
 })
