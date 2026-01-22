@@ -38,7 +38,7 @@ ls.add_snippets('gdscript', {
   ls.parser.parse_snippet(
     'ex',
     [[
-	@export var ${1:name} 
+	@export var ${1:name}
 	]]
   ),
   -- [Ex]port [G]roup

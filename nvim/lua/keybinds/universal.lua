@@ -2,6 +2,10 @@
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 
+-- [C]apitalize Word
+vim.keymap.set('n', 'gC', 'g~iW', { desc = 'Toggle [C]ase of Word' })
+vim.keymap.set('s', 'gC', 'g~', { desc = 'Toggle [C]ase of Selection' })
+
 -- windows with <leader>w instead of <C-w>
 vim.keymap.set('n', '<leader>w', '<C-w>', { remap = true, desc = '[W]indow Management' })
 
