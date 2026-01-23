@@ -25,13 +25,13 @@ ls.add_snippets('gdscript', {
   ls.parser.parse_snippet(
     'vv2',
     [[
-	var ${1:name}: Vector2 = Vector2(${2:0},${3:0})
+	var ${1:name}: Vector2 = Vector2(${2:0}, ${3:0})
 	]]
   ),
   ls.parser.parse_snippet(
     'vv3',
     [[
-	var ${1:name}: Vector3 = Vector3(${2:0},${3:0},${3:0})
+	var ${1:name}: Vector3 = Vector3(${2:0}, ${3:0}, ${3:0})
 	]]
   ),
   -- [Ex]port [V]ariable
@@ -60,6 +60,29 @@ ls.add_snippets('gdscript', {
     'exb',
     [[
 	@export_tool_button("${1:label}", "Callable") var ${2:name} = ${3:callable}
+	]]
+  ),
+
+  -- Traditional shorthand
+  ls.parser.parse_snippet(
+    'v2',
+    [[
+	Vector2(${1:0}, ${2:0})
+	]]
+  ),
+
+  -- Vector2 zero constant value
+  ls.parser.parse_snippet(
+    'v2z',
+    [[
+	Vector2.ZERO
+	]]
+  ),
+
+  ls.parser.parse_snippet(
+    'v3',
+    [[
+	Vector3(${1:0}, ${2:0}, ${3:0})
 	]]
   ),
 
