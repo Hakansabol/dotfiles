@@ -54,6 +54,13 @@ ls.add_snippets('cpp', {
 	]]
   ),
 
+  -- [V]ector of [V]ector of [I]ntegers (i32)
+  ls.parser.parse_snippet(
+    'vvi',
+    [[
+	vector<vector<int>> ${1:nums}(${2:n}, vector<int>(${3:m}, 0));
+	]]
+  ),
   -- [V]ector of [I]ntegers (i32)
   ls.parser.parse_snippet(
     'vi',

@@ -9,6 +9,7 @@ PS1='[\u@\h \W]\$ '
 alias cd='z'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias qgc='QT_QPA_PLATFORM=xcb qgroundcontrol'
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
