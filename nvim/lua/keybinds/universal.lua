@@ -18,6 +18,7 @@ vim.keymap.set('n', '-', ':Oil<CR>', { desc = 'Open [O]il' })
 
 vim.g.clipboard = 'wl-copy'
 
+-- theme switcher
 vim.api.nvim_create_user_command('Themes', function()
   vim.cmd 'Telescope colorscheme'
 end, {})

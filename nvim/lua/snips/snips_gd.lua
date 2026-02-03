@@ -34,11 +34,46 @@ ls.add_snippets('gdscript', {
 	var ${1:name}: Vector3 = Vector3(${2:0}, ${3:0}, ${3:0})
 	]]
   ),
-  -- [Ex]port [V]ariable
+  -- [Ex]port Variable
   ls.parser.parse_snippet(
     'ex',
     [[
 	@export var ${1:name}
+	]]
+  ),
+  -- [Ex]port [N]ode
+  ls.parser.parse_snippet(
+    'exn',
+    [[
+	@export var ${1:name}: PackedScene
+	]]
+  ),
+  -- [Ex]port [A]rray
+  ls.parser.parse_snippet(
+    'exa',
+    [[
+	@export var ${1:name}: Array = []
+	]]
+  ),
+  -- [Ex]port [I]nt
+  ls.parser.parse_snippet(
+    'exi',
+    [[
+	@export var ${1:name}: int = ${2:0}
+	]]
+  ),
+  -- [Ex]port [F]loat
+  ls.parser.parse_snippet(
+    'exf',
+    [[
+	@export var ${1:name}: float = ${2:0.0}
+	]]
+  ),
+  -- [Ex]port [T]exture2D
+  ls.parser.parse_snippet(
+    'ext',
+    [[
+	@export var ${1:name}: Texture2D = ${2:0.0}
 	]]
   ),
   -- [Ex]port [G]roup
@@ -103,6 +138,13 @@ ls.add_snippets('gdscript', {
     'vmouse',
     [[
 	var mouse_position := get_viewport().get_mouse_position()
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'twait',
+    [[
+	func wait(seconds: float) -> void:
+		await get_tree().create_timer(seconds).timeout
 	]]
   ),
 })
