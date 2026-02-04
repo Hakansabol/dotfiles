@@ -114,6 +114,21 @@ ls.add_snippets('gdscript', {
 	]]
   ),
 
+  -- [F]u[n]ction
+  ls.parser.parse_snippet(
+    'fn',
+    [[
+	func ${1:name}($2) -> ${3:void}:
+	]]
+  ),
+
+  ls.parser.parse_snippet(
+    'cn',
+    [[
+	class_name $1
+	]]
+  ),
+
   ls.parser.parse_snippet(
     'v3',
     [[
