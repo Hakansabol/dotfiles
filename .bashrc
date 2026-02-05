@@ -8,5 +8,5 @@ PS1='[\u@\h \W]\$ '
 
 source ~/dotfiles/.sharedrc
 
-eval "$(zoxide init bash)"
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"

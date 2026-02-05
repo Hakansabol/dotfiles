@@ -11,7 +11,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
-
 source ~/dotfiles/.sharedrc
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
