@@ -54,7 +54,7 @@ require('lazy').setup {
   require 'plugins.nvim-lspconfig',
   require 'plugins.blink',
   require 'plugins.guess-indent',
-  -- require 'plugins.gitsigns',
+  require 'plugins.gitsigns',
   require 'plugins.which-key',
   require 'plugins.conform',
   require 'plugins.todo-comments',

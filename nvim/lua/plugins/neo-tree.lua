@@ -12,6 +12,8 @@ return {
   lazy = false,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>ct', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>cg', ':Neotree float git_status<CR>', desc = 'NeoTree git status', silent = true },
   },
   opts = {
     filesystem = {
