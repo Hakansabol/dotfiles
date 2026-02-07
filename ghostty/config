@@ -3,3 +3,5 @@
 theme = "Builtin Dark"
 window-padding-y= 0,0
 window-decoration=none
+
+command=zsh

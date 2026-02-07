@@ -15,8 +15,8 @@ vim.g.maplocalleader = ' '
 vim.o.number = true
 vim.o.mouse = 'a'
 vim.o.showmode = false
-vim.o.breakindent = true
-vim.o.undofile = true
+vim.o.breakindent = true -- indent line wrapping
+vim.o.undofile = true -- undo history saved between sessions
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.signcolumn = 'yes'
@@ -28,17 +28,8 @@ vim.o.list = true
 vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
+vim.o.confirm = true -- confirm dialogue such as when quitting without saving
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s)
--- See `:help 'confirm'`
-vim.o.confirm = true
-
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -57,52 +48,35 @@ rtp:prepend(lazypath)
 
 -- :Lazy - Manage plugins
 -- :Lazy update - updates plugins
-require('lazy').setup({
-  require 'plugins.guess-indent',
-  require 'plugins.gitsigns',
-  require 'plugins.which-key',
+require('lazy').setup {
+  -- Kickstart plugins
   require 'plugins.telescope',
-  require 'plugins.lazydev',
   require 'plugins.nvim-lspconfig',
-  require 'plugins.conform',
   require 'plugins.blink',
+  require 'plugins.guess-indent',
+  -- require 'plugins.gitsigns',
+  require 'plugins.which-key',
+  require 'plugins.conform',
   require 'plugins.todo-comments',
   require 'plugins.mini',
   require 'plugins.nvim-treesitter',
   require 'plugins.indent_line',
   require 'plugins.autopairs',
+  require 'plugins.lazydev',
+  require 'plugins.neo-tree',
 
-  require 'plugins.midnight',
-  require 'plugins.jellybeans',
-
+  -- Custom
   require 'plugins.roslyn',
   require 'plugins.oil',
   require 'plugins.trouble',
   require 'plugins.hop',
   require 'plugins.neoterm',
   require 'plugins.competitest',
-}, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
-    backdrop = 100,
-  },
-})
+
+  -- Themes
+  require 'plugins.midnight',
+  require 'plugins.jellybeans',
+}
 
 -- PLUGIN SETUP
 require 'lsp.roslyn'
