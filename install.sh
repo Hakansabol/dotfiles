@@ -77,6 +77,7 @@ ln ~/dotfiles/yazi/ ~/.config/yazi -sd
 ln ~/dotfiles/waybar/ ~/.config/waybar -sd
 ln ~/dotfiles/ghostty/ ~/.config/ghostty -sd
 ln ~/dotfiles/fuzzel/ ~/.config/fuzzel -sd
+ln ~/dotfiles/godot/ ~/.config/godot -sd
 
 # ghostty setup
 rm ~/.bashrc
