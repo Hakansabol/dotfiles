@@ -6,5 +6,6 @@ window-decoration=none
 
 keybind = performable:ctrl+,=unbind
 keybind = performable:ctrl+tab=unbind
+keybind = performable:ctrl+shift+tab=unbind
 
 command=zsh

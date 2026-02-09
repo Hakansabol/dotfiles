@@ -1,6 +1,23 @@
 local ls = require 'luasnip'
 
+-- lua style snippets
+local s = ls.s
+local i = ls.insert_node
+local fmt = require('luasnip.extras.fmt').fmt
+local rep = require('luasnip.extras').rep
+
 ls.add_snippets('gdscript', {
+  --  lua style snippets demo
+  --  s(
+  --    'lss',
+  --    fmt(
+  --      [[
+  -- lua style snippets: {}
+  -- ]],
+  --      { i(1, 'name') }
+  --    )
+  --  ),
+
   -- Variables, Exports
   -- [V]ariable [I]nteger
   ls.parser.parse_snippet(
@@ -16,22 +33,32 @@ ls.add_snippets('gdscript', {
 	var ${1:name}: float = ${2:0.0}
 	]]
   ),
+  -- [V]ariable [B]ool
   ls.parser.parse_snippet(
     'vb',
     [[
 	var ${1:name}: bool = ${2:false}
 	]]
   ),
+  -- [V]ariable [V]ector2
   ls.parser.parse_snippet(
     'vv2',
     [[
 	var ${1:name}: Vector2 = Vector2(${2:0}, ${3:0})
 	]]
   ),
+  -- [V]ariable [V]ector3
   ls.parser.parse_snippet(
     'vv3',
     [[
-	var ${1:name}: Vector3 = Vector3(${2:0}, ${3:0}, ${3:0})
+	var ${1:name}: Vector3 = Vector3(${2:0}, ${3:0}, ${4:0})
+	]]
+  ),
+  -- [V]ariable [A]rray
+  ls.parser.parse_snippet(
+    'va',
+    [[
+	var ${1:name}: Array = [$2]
 	]]
   ),
   -- [Ex]port Variable
@@ -41,18 +68,11 @@ ls.add_snippets('gdscript', {
 	@export var ${1:name}
 	]]
   ),
-  -- [Ex]port [N]ode
+  -- [Ex]port [B]oolean
   ls.parser.parse_snippet(
-    'exn',
+    'exb',
     [[
-	@export var ${1:name}: PackedScene
-	]]
-  ),
-  -- [Ex]port [A]rray
-  ls.parser.parse_snippet(
-    'exa',
-    [[
-	@export var ${1:name}: Array = []
+	@export var ${1:name}: bool
 	]]
   ),
   -- [Ex]port [I]nt
@@ -67,6 +87,34 @@ ls.add_snippets('gdscript', {
     'exf',
     [[
 	@export var ${1:name}: float = ${2:0.0}
+	]]
+  ),
+  -- [V]ariable [V]ector2
+  ls.parser.parse_snippet(
+    'exv2',
+    [[
+	@export var ${1:name}: Vector2 = Vector2(${2:0}, ${3:0})
+	]]
+  ),
+  -- [V]ariable [V]ector3
+  ls.parser.parse_snippet(
+    'exv3',
+    [[
+	@export var ${1:name}: Vector3 = Vector3(${2:0}, ${3:0}, ${4:0})
+	]]
+  ),
+  -- [Ex]port [N]ode
+  ls.parser.parse_snippet(
+    'exn',
+    [[
+	@export var ${1:name}: PackedScene
+	]]
+  ),
+  -- [Ex]port [A]rray
+  ls.parser.parse_snippet(
+    'exa',
+    [[
+	@export var ${1:name}: Array = []
 	]]
   ),
   -- [Ex]port [T]exture2D
@@ -90,9 +138,9 @@ ls.add_snippets('gdscript', {
 	@export_category("${1:label}")
 	]]
   ),
-  -- [Ex]port Tool [B]utton
+  -- [Ex]port [T]ool [B]utton
   ls.parser.parse_snippet(
-    'exb',
+    'extb',
     [[
 	@export_tool_button("${1:label}", "Callable") var ${2:name} = ${3:callable}
 	]]

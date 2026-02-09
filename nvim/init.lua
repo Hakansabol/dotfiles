@@ -96,6 +96,7 @@ require 'keybinds.codeforces'
 
 -- SNIPS
 require 'snips'
+require('luasnip.loaders.from_lua').load { paths = '~/snips/snips_test.lua' }
 
 -- THEME
 vim.cmd.colorscheme 'midnight'
