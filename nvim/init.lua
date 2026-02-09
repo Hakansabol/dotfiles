@@ -50,6 +50,7 @@ rtp:prepend(lazypath)
 -- :Lazy update - updates plugins
 require('lazy').setup {
   -- Kickstart plugins
+  require 'plugins.barbar',
   require 'plugins.telescope',
   require 'plugins.nvim-lspconfig',
   require 'plugins.blink',

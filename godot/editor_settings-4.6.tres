@@ -56,6 +56,7 @@ _project_settings_advanced_mode = false
 _export_template_download_directory = ""
 _default_feature_profile = ""
 _script_setup_templates_dictionary = {
+"AnimationPlayer": "0NodeDefault",
 "Area2D": "0NodeDefault",
 "Node": "0NodeDefault",
 "Panel": "0NodeDefault",

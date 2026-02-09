@@ -4,4 +4,7 @@ theme = "Builtin Dark"
 window-padding-y= 0,0
 window-decoration=none
 
+keybind = performable:ctrl+,=unbind
+keybind = performable:ctrl+tab=unbind
+
 command=zsh
