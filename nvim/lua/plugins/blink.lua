@@ -50,8 +50,17 @@ return { -- Autocompletion
         'fallback',
       },
 
-      ['<C-j>'] = { 'select_next', 'fallback' },
-      ['<C-k>'] = { 'select_prev', 'fallback' },
+      -- these are defined in `universal.lua` now because blink wasn't
+      -- playing well with luasnip's choice nodes
+      -- ['<C-j>'] = {
+      --   function(cmp)
+      --     local ls = require 'luasnip'
+      --     ls.change_choice(1)
+      --   end,
+      --   'select_next',
+      --   -- 'fallback',
+      -- },
+      -- ['<C-k>'] = { 'select_prev', 'fallback' },
 
       -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
       --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -67,7 +76,7 @@ return { -- Autocompletion
       documentation = { auto_show = false, auto_show_delay_ms = 500 },
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'lazydev' },
+      default = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
       providers = {
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
       },

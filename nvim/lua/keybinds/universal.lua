@@ -87,3 +87,19 @@ vim.api.nvim_create_user_command('W', function()
   vim.lsp.buf.format()
   vim.cmd 'w'
 end, {})
+
+-- fixing blink >:(
+vim.keymap.set('i', '<C-j>', function()
+  local lsn = require 'luasnip'
+  if lsn.choice_active() then
+    lsn.change_choice(1)
+  end
+  require('blink-cmp').select_next()
+end)
+vim.keymap.set('i', '<C-k>', function()
+  local lsn = require 'luasnip'
+  if lsn.choice_active() then
+    lsn.change_choice(-1)
+  end
+  require('blink-cmp').select_prev()
+end)
