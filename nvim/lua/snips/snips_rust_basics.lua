@@ -23,7 +23,7 @@ ls.add_snippets('rust', {
 	{}
   }}
   ]],
-      { i(1, 'name'), c(2, { t 'yes', t '&self, ' }), i(3), i(4, 'ot'), i(5, 'body') }
+      { i(1, 'name'), c(2, { t 'yes', t '&self, ' }), i(3, '()'), i(4, 'ot'), i(5, 'body') }
     )
   ),
 })
