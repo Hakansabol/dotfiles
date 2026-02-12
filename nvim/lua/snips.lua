@@ -17,4 +17,5 @@ ls.add_snippets('all', {
 require 'snips/snips_cpp'
 require 'snips/snips_cs'
 require 'snips/snips_gd'
+require 'snips/snips_rust'
 require 'snips/snips_lua'

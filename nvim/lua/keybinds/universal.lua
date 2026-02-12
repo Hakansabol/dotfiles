@@ -81,3 +81,9 @@ vim.keymap.set('i', '<Tab>', '<Tab>', { remap = false })
 vim.keymap.set('n', 'gd', function()
   vim.diagnostic.jump { count = 1, float = true }
 end, { desc = '[G]oto [D]iagnostic' })
+
+-- write and format (for langs with conform.nvim disabled)
+vim.api.nvim_create_user_command('W', function()
+  vim.lsp.buf.format()
+  vim.cmd 'w'
+end, {})
