@@ -25,6 +25,10 @@ bar() {
 	fi
 }
 
+venv() {
+	source $(fd -I activate$)
+}
+
 # wallpaper select
 setwallpaper() {
 	echo "$1" > ~/dotfiles/.wallpaper
