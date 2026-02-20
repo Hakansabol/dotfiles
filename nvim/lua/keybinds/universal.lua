@@ -10,6 +10,7 @@ local opts = { noremap = true, silent = true }
 map('n', '<C-S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-Tab>', '<Cmd>BufferNext<CR>', opts)
 map('n', '<C-w>p', '<Cmd>BufferPick<CR>', opts)
+map('n', '<C-w><C-w>', '<Cmd>BufferClose<CR>', opts)
 
 map('n', '<C-1>', '<Cmd>BufferGoto 1<CR>', opts)
 map('n', '<C-2>', '<Cmd>BufferGoto 2<CR>', opts)
@@ -104,4 +105,7 @@ vim.keymap.set('i', '<C-k>', function()
   else
     require('blink-cmp').select_prev()
   end
+end)
+vim.keymap.set('i', '<C-i>', function()
+  require 'luasnip.extras.select_choice'()
 end)

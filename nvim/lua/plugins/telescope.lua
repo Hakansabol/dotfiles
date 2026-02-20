@@ -23,9 +23,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
       extensions = {
-        ['ui-select'] = {
-          require('telescope.themes').get_dropdown(),
-        },
+        -- ['ui-select'] = {
+        --   require('telescope.themes').get_dropdown(),
+        -- },
       },
       mappings = {
         i = {
