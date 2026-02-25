@@ -73,10 +73,12 @@ require('lazy').setup {
   require 'plugins.hop',
   require 'plugins.neoterm',
   require 'plugins.competitest',
+  require 'plugins.telescope-luasnip',
 
   -- Themes
-  require 'plugins.midnight',
-  require 'plugins.jellybeans',
+  { 'dasupradyumna/midnight.nvim', lazy = false, priority = 1000 },
+  { 'wtfox/jellybeans.nvim', lazy = false, priority = 1000 },
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
 }
 
 -- PLUGIN SETUP
@@ -100,5 +102,5 @@ require('luasnip.loaders.from_lua').load { paths = '~/snips/snips_rust.lua' }
 require('luasnip.loaders.from_lua').load { paths = '~/snips/snips_rust_basics.lua' }
 
 -- THEME
-vim.cmd.colorscheme 'midnight'
-vim.cmd 'hi Normal guibg=#000000'
+vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd 'hi Normal guibg=#000000'

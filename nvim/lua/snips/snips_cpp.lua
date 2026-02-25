@@ -109,9 +109,9 @@ ls.add_snippets('cpp', {
 
   -- Templates: Full file boilerplate
 
-  -- [T]emplate: [C]ode[f]orces
+  -- Template: [C]ode[f]orces
   ls.parser.parse_snippet(
-    'tcf',
+    'zcodeforces',
     [[
 	#include <iostream>
 	#include <vector>
@@ -131,9 +131,9 @@ ls.add_snippets('cpp', {
 	]]
   ),
 
-  -- [T]emplate: C++/[CPP]
+  -- Template: C++/[CPP]
   ls.parser.parse_snippet(
-    'tcpp',
+    'zmain',
     [[
 	#include <iostream>
 	using namespace std;

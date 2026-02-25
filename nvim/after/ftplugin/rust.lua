@@ -32,7 +32,3 @@ vim.keymap.set('n', '<leader>lm', function()
 
   setl(l)
 end, { desc = 'Toggle [M]ut in line let statement' })
-
--- ################
--- language inserts
--- ################

@@ -1,5 +1,12 @@
 local ls = require 'luasnip'
 
+-- ##############################
+-- SNIPPETS
+-- Defined in functions matching the name of the language.
+-- Defined primarily with the Lua syntax, VSC-style are old.
+-- Snippets can be searched via <leader>cn
+-- ##############################
+
 ls.config.set_config {
   history = true,
   updateevents = 'TextChanged, TextChangedI',
