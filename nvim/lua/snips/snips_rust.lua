@@ -8,7 +8,7 @@ local rep = require('luasnip.extras').rep
 
 ls.add_snippets('rust', {
   s(
-    'lssss',
+    'zblag',
     fmt(
       [[
   lua style snippets: {}
