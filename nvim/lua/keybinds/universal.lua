@@ -49,7 +49,7 @@ vim.api.nvim_create_user_command('Themes', function()
 end, {})
 
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Execute [C]ode [A]ction' })
-vim.keymap.set('n', 's', require('hop').hint_words, { desc = 'Hop' })
+vim.keymap.set('n', '<leader>h', require('hop').hint_words, { desc = 'Hop' })
 
 vim.g.neoterm_default_mod = 'vertical'
 
@@ -105,7 +105,4 @@ vim.keymap.set('i', '<C-k>', function()
   else
     require('blink-cmp').select_prev()
   end
-end)
-vim.keymap.set('i', '<C-i>', function()
-  require 'luasnip.extras.select_choice'()
 end)
