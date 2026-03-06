@@ -1,6 +1,5 @@
 font-family = DroidSansM Nerd Font
-# theme = "Duckbones"
-theme = "Builtin Dark"
+theme = "Gruvbox Material"
 window-padding-y= 0,0
 window-decoration=none
 
