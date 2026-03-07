@@ -62,6 +62,7 @@ _script_setup_templates_dictionary = {
 "Panel": "0NodeDefault",
 "RichTextAnimation": "0NodeDefault",
 "RmlDialogue": "0NodeDefault",
+"Shader": "0ObjectEmpty",
 "Sprite2D": "0NodeDefault",
 "StaticBody2D": "0NodeDefault",
 "TextureRect": "0NodeDefault"
