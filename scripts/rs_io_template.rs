@@ -15,16 +15,16 @@ Thank You
 
 use std::io::stdin;
 
-fn take_int() -> usize {
+fn take_int() -> i32 {
     let mut input = String::new();
     stdin().read_line(&mut input).unwrap();
     return input.trim().parse().unwrap()
 }
 
-fn take_vector() -> Vec<usize> {
+fn take_vector() -> Vec<i32> {
     let mut input = String::new();
     stdin().read_line(&mut input).unwrap();
-    let arr: Vec<usize> = input.trim().split_whitespace().map(|x| x.parse().unwrap()).collect();
+    let arr: Vec<i32> = input.trim().split_whitespace().map(|x| x.parse().unwrap()).collect();
     return arr;
 }
 
