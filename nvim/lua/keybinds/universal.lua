@@ -106,3 +106,5 @@ vim.keymap.set('i', '<C-k>', function()
     require('blink-cmp').select_prev()
   end
 end)
+
+vim.keymap.set('n', 's', '')
