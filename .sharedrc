@@ -34,7 +34,7 @@ cargadd() {
 		if [ -f Cargo.toml ]; then
 			if [ ! -f src/$1.rs ]; then
 				echo "[[bin]]\nname=\"$1\"\npath=\"src/$1.rs\"" >> Cargo.toml
-				echo "fn main() -> Result<(), Box<dyn std::error::Error>> {\n\tOk(())\n}\n" > src/$1.rs
+				cp ~/dotfiles/scripts/rs_io_template.rs src/$1.rs
 			else;
 				echo -e "\e[31merror: \e[0mfile exists"
 			fi;
