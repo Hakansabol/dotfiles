@@ -46,9 +46,17 @@ cargadd() {
 	fi;
 }
 
+qm() {
+	sudo mount $1 $2 -o uid=1000
+}
+
 # wallpaper select
 setwallpaper() {
 	echo "$1" > ~/dotfiles/.wallpaper
 	swww img $(cat ~/dotfiles/.wallpaper)
+}
+
+nvmi() {
+	. /usr/share/nvm/init-nvm.sh
 }
 
