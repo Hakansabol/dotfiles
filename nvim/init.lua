@@ -30,6 +30,7 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true -- confirm dialogue such as when quitting without saving
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- stop highlighting search on {n} <Esc>
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

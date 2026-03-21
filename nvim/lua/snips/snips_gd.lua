@@ -3,21 +3,12 @@ local ls = require 'luasnip'
 -- lua style snippets
 local s = ls.s
 local i = ls.insert_node
+local c = ls.choice_node
+local t = ls.text_node
 local fmt = require('luasnip.extras.fmt').fmt
 local rep = require('luasnip.extras').rep
 
 ls.add_snippets('gdscript', {
-  --  lua style snippets demo
-  --  s(
-  --    'lss',
-  --    fmt(
-  --      [[
-  -- lua style snippets: {}
-  -- ]],
-  --      { i(1, 'name') }
-  --    )
-  --  ),
-
   -- Variables, Exports
   -- [V]ariable [I]nteger
   ls.parser.parse_snippet(
@@ -147,11 +138,19 @@ ls.add_snippets('gdscript', {
   ),
 
   -- Traditional shorthand
-  ls.parser.parse_snippet(
+  s(
     'v2',
-    [[
-	Vector2(${1:0}, ${2:0})
-	]]
+    fmt(
+      [[
+		Vector2{}
+		]],
+      { c(1, { fmt(
+        [[
+		({}, {})
+		]],
+        { i(1, '0'), i(1, '0') }
+      ), t '' }) }
+    )
   ),
 
   -- Vector2 zero constant value
