@@ -148,7 +148,7 @@ ls.add_snippets('gdscript', {
         [[
 		({}, {})
 		]],
-        { i(1, '0'), i(1, '0') }
+        { i(1, '0'), i(2, '0') }
       ), t '' }) }
     )
   ),
@@ -202,11 +202,41 @@ ls.add_snippets('gdscript', {
 	var mouse_position := get_viewport().get_mouse_position()
 	]]
   ),
+
+  -- TEMPLATES
   ls.parser.parse_snippet(
     'twait',
     [[
 	func wait(seconds: float) -> void:
 		await get_tree().create_timer(seconds).timeout
 	]]
+  ),
+  ls.parser.parse_snippet(
+    'tsleep',
+    [[
+	func wait(seconds: float) -> void:
+		await get_tree().create_timer(seconds).timeout
+	]]
+  ),
+  ls.parser.parse_snippet(
+    'tlerp',
+    [[
+# PREFAB METHOD: LERP
+@export var USE_LOCAL_POSITION: bool = true
+var lerp_start: Vector2
+var lerp_end: Vector2
+var lerp_time: Vector2
+var lerp_curve: float = -8 # a sensible default
+func lerp_to(target: Vector2, duration: float, curve_constant: float = 10000): # the curve_constant is defaulted to a large value to prevent float precision annoyances.
+	lerp_start = position if USE_LOCAL_POSITION else global_position
+	lerp_end = target
+	lerp_time = Vector2(0, duration) # set the time variables. lerp_time[0] will be incremented every timestep.
+	lerp_curve = curve_constant if curve_constant < 1000 else lerp_curve # if no curve_constant is provided, use the previously assigned one.
+
+func lerp_get(delta: float):
+	lerp_time.x += delta
+	return lerp_begin + (lerp_end - lerp_begin) * ease(lerp_time.x / lerp_time.y, lerp_curve)
+
+			]]
   ),
 })

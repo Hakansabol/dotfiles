@@ -42,6 +42,7 @@ vim.keymap.set('n', '<leader>q', ':update<CR>:q<CR>', { desc = 'Save and [Q]uit'
 vim.keymap.set('n', '-', ':Oil<CR>', { desc = 'Open [O]il' })
 
 vim.g.clipboard = 'wl-copy'
+vim.keymap.set('n', '<leader>c"', '"+yi"', { desc = '[C]opy contents of [String literal]' })
 
 -- theme switcher
 vim.api.nvim_create_user_command('Themes', function()
