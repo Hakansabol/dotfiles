@@ -80,6 +80,13 @@ ls.add_snippets('gdscript', {
 	@export var ${1:name}: float = ${2:0.0}
 	]]
   ),
+  -- [Ex]port [S]prite2D
+  ls.parser.parse_snippet(
+    'exs',
+    [[
+	@export var ${1:name}: Sprite2D
+	]]
+  ),
   -- [V]ariable [V]ector2
   ls.parser.parse_snippet(
     'exv2',
@@ -222,7 +229,7 @@ ls.add_snippets('gdscript', {
     'tlerp',
     [[
 # PREFAB METHOD: LERP
-@export var USE_LOCAL_POSITION: bool = true
+var USE_LOCAL_POSITION: bool = true
 var lerp_start: Vector2
 var lerp_end: Vector2
 var lerp_time: Vector2

@@ -29,6 +29,20 @@ venv() {
 	source $(fd -I activate$)
 }
 
+qm() {
+	sudo mount $1 $2 -o uid=1000
+}
+
+# wallpaper select
+setwallpaper() {
+	echo "$1" > ~/dotfiles/.wallpaper
+	swww img $(cat ~/dotfiles/.wallpaper)
+}
+
+nvmi() {
+	. /usr/share/nvm/init-nvm.sh
+}
+
 cargadd() {
 	if [ $1 ]; then
 		if [ -f Cargo.toml ]; then
@@ -45,18 +59,3 @@ cargadd() {
 		echo -e "\e[31merror: \e[0mno name specified"
 	fi;
 }
-
-qm() {
-	sudo mount $1 $2 -o uid=1000
-}
-
-# wallpaper select
-setwallpaper() {
-	echo "$1" > ~/dotfiles/.wallpaper
-	swww img $(cat ~/dotfiles/.wallpaper)
-}
-
-nvmi() {
-	. /usr/share/nvm/init-nvm.sh
-}
-

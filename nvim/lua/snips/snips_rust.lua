@@ -26,7 +26,7 @@ ls.add_snippets('rust', {
 	{}
   }}
   ]],
-      { i(1, 'name'), c(2, { t 'yes', t '&self, ' }), i(3, '()'), i(4, 'ot'), i(5, 'body') }
+      { i(1, 'name'), c(2, { t '&self, ', t '' }), i(3, '()'), i(4, 'ot'), i(5, 'body') }
     )
   ),
   -- basic println of a single element
@@ -46,12 +46,32 @@ ls.add_snippets('rust', {
   ),
   -- variable intake
   s(
+    'vv', -- [V]ariable: [V]ector
+    fmt(
+      [[
+		let {} = vec![];
+		]],
+      { c(1, { fmt('mut {}', i(1)), i(1) }) }
+    )
+  ),
+  s(
     'v',
     fmt(
       [[
 		let {} = {};
 		]],
       { c(1, { i(1), fmt('mut {}', i(1)) }), i(2, '0') }
+    )
+  ),
+  -- variable output
+
+  s(
+    '>v', -- output [V]ector
+    fmt(
+      [[
+	let {} = {}.iter().map(|x| x.to_string()).collect::<Vec<String>>().join(" ");
+		]],
+      { i(2, 'out'), i(1, 'nums') }
     )
   ),
 })
