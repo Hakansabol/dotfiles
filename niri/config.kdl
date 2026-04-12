@@ -268,8 +268,8 @@ layout {
 }
 
 spawn-at-startup "mako"
-spawn-sh-at-startup "swww-daemon"
-spawn-sh-at-startup "swww img $(cat ~/dotfiles/.wallpaper)"
+spawn-sh-at-startup "awww-daemon"
+spawn-sh-at-startup "awww img $(cat ~/dotfiles/.wallpaper)"
 spawn-sh-at-startup "espanso start --unmanaged"
 
 prefer-no-csd

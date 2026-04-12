@@ -36,7 +36,7 @@ qm() {
 # wallpaper select
 setwallpaper() {
 	echo "$1" > ~/dotfiles/.wallpaper
-	swww img $(cat ~/dotfiles/.wallpaper)
+	awww img $(cat ~/dotfiles/.wallpaper)
 }
 
 nvmi() {

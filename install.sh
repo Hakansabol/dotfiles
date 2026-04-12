@@ -20,7 +20,7 @@ sudo pacman --noconfirm -S niri
 sudo pacman --noconfirm -S ghostty
 sudo pacman --noconfirm -S rofi
 sudo pacman --noconfirm -S fuzzel
-sudo pacman --noconfirm -S swww
+sudo pacman --noconfirm -S awww
 sudo pacman --noconfirm -S libinput
 sudo pacman --noconfirm -S mako
 sudo pacman --noconfirm -S waybar
