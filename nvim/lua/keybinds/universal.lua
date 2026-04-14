@@ -92,19 +92,22 @@ end, {})
 
 -- fixing blink >:(
 vim.keymap.set('i', '<C-j>', function()
+  require('blink-cmp').select_next()
+end)
+vim.keymap.set('i', '<C-k>', function()
+  require('blink-cmp').select_prev()
+end)
+vim.keymap.set('i', '<C-n>', function()
   local lsn = require 'luasnip'
   if lsn.choice_active() then
     lsn.change_choice(1)
   else
-    require('blink-cmp').select_next()
   end
 end)
-vim.keymap.set('i', '<C-k>', function()
+vim.keymap.set('i', '<C-m>', function()
   local lsn = require 'luasnip'
   if lsn.choice_active() then
     lsn.change_choice(-1)
-  else
-    require('blink-cmp').select_prev()
   end
 end)
 

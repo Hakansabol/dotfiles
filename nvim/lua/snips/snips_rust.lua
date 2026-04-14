@@ -34,7 +34,7 @@ ls.add_snippets('rust', {
     'prln',
     fmt(
       [[
-	println!("{<>}");
+	println!("{}", <>);
 	  ]],
       {
         i(1, 'n'),
@@ -44,7 +44,17 @@ ls.add_snippets('rust', {
       }
     )
   ),
-  -- variable intake
+  -- variable output
+  s(
+    '>v', -- output [V]ector
+    fmt(
+      [[
+	let {} = {}.iter().map(|x| x.to_string()).collect::<Vec<String>>().join(" ");
+		]],
+      { i(2, 'out'), i(1, 'nums') }
+    )
+  ),
+  -- variable declaration
   s(
     'vv', -- [V]ariable: [V]ector
     fmt(
@@ -61,17 +71,6 @@ ls.add_snippets('rust', {
 		let {} = {};
 		]],
       { c(1, { i(1), fmt('mut {}', i(1)) }), i(2, '0') }
-    )
-  ),
-  -- variable output
-
-  s(
-    '>v', -- output [V]ector
-    fmt(
-      [[
-	let {} = {}.iter().map(|x| x.to_string()).collect::<Vec<String>>().join(" ");
-		]],
-      { i(2, 'out'), i(1, 'nums') }
     )
   ),
 })
