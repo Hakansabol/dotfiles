@@ -75,6 +75,7 @@ require('lazy').setup {
   require 'plugins.neoterm',
   require 'plugins.competitest',
   require 'plugins.telescope-luasnip',
+  require 'plugins.leetcode',
 
   -- Themes
   { 'dasupradyumna/midnight.nvim', lazy = false, priority = 1000 },
