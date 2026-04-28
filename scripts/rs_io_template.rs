@@ -10,15 +10,13 @@ mod template {
 }
 
 use template::*;
-//=========================================================
-//================== THE FUN BEGINS HERE ==================
-//=========================================================
 
 fn solve() {
-    //  TODO: CODE GOES HERE
+    //================== THE FUN BEGINS HERE ==================
 }
 
 pub fn main() {
-    let t = take_int();
-    for _ in 0..t { solve(); }
+    for _ in 0..take_int() {
+        solve();
+    }
 }
