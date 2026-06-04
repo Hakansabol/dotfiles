@@ -1,13 +1,14 @@
 # pre install essentials
-sudo pacman --noconfirm -S sudo vi vim nano git linux-firmware dhcpcd networkmanager base-devel less which
+sudo pacman --noconfirm -Sy sudo vi vim nano git linux-firmware dhcpcd networkmanager base-devel less which
 # install fonts
 sudo pacman --noconfirm -S noto-fonts noto-fonts-cjk otf-font-awesome
 # install niri
-sudo pacman --noconfirm -S xdg-desktop-portal-gnome niri ghostty rofi fuzzel awww libinput mako waybar xwayland-sattelite sof-firmware waybar xorg-server brightnessctl dialog font-manager fastfetch pulseaudio dolphin
+sudo pacman --noconfirm -S xdg-desktop-portal-gnome niri ghostty rofi fuzzel awww libinput mako waybar xwayland-satellite sof-firmware xorg-server brightnessctl dialog font-manager fastfetch pulseaudio dolphin nautilus ark
 # install neovim
 sudo pacman --noconfirm -S neovim gzip cmake make gcc ripgrep clang lua xclip wl-clipboard unzip nmap
 # install extras
 sudo pacman --noconfirm -S yazi zsh ffmpeg jq poppler fd ripgrep fzf zoxide xclip 7zip python python-pip man-db firefox fd starship
+sudo pacman --noconfirm -S alacritty kitty btop powertop
 
 # enable services if not already
 sudo systemctl enable --now dhcpcd
