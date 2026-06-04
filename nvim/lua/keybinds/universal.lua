@@ -23,9 +23,9 @@ map('n', '<C-8>', '<Cmd>BufferGoto 8<CR>', opts)
 map('n', '<C-9>', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<C-0>', '<Cmd>BufferLast<CR>', opts)
 
--- better wrapping
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
+-- better wrapping (bad for macros so i disabled it)
+-- vim.keymap.set('n', 'j', 'gj')
+-- vim.keymap.set('n', 'k', 'gk')
 
 -- [C]apitalize Word
 vim.keymap.set('n', 'gC', 'g~iW', { desc = 'Toggle [C]ase of Word' })
