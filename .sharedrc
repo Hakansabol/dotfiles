@@ -49,13 +49,13 @@ cargadd() {
 			if [ ! -f src/$1.rs ]; then
 				echo "[[bin]]\nname=\"$1\"\npath=\"src/$1.rs\"" >> Cargo.toml
 				cp ~/dotfiles/scripts/rs_io_template.rs src/$1.rs
-			else;
+			else
 				echo -e "\e[31merror: \e[0mfile exists"
 			fi;
-		else;
+		else
 			echo -e "\e[31merror: \e[0mno Cargo.toml found"
 		fi;
-	else;
+	else
 		echo -e "\e[31merror: \e[0mno name specified"
 	fi;
 }
