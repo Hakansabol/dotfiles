@@ -38,6 +38,72 @@ fn eratosthenes(cnt: usize) -> Vec<u64> {
     basin
 }]]
   ),
+  ls.parser.parse_snippet(
+    'zfrequency_map',
+    [[/// zt: Frequency Map
+/// Generate a frequency map from a vector
+/// vec![1,1,3] becomes {1: 2, 3: 1}
+fn freqmap<T: Eq + Hash>(v: &Vec<T>) -> std::collections::HashMap<&T, i32> {
+    let mut hm = std::collections::HashMap::new();
+    for a in v {
+        *hm.entry(a).or_insert(0) += 1;
+    }
+    hm
+}
+]]
+  ),
+  ls.parser.parse_snippet(
+    'zprime_factorization',
+    [[/// zt: Prime Factorization
+/// Returns the prime factors of n.
+/// TODO: Optimize to only test prime numbers
+fn prime_factorization(n: i64) -> Vec<i64> {
+    let mut v = vec![];
+    let mut n = n;
+    while n & 1 == 0 {
+        n /= 2;
+        v.push(2);
+    }
+    let mut div = 3;
+    while n > 1 && div * div <= n {
+        while n % div == 0 {
+            n /= div;
+            v.push(div);
+        }
+        div += 2;
+    }
+    if n > 1 {
+        // catch prime factors bigger than sqrt(n)
+        v.push(n);
+    }
+    v // return the vector as owned
+}]]
+  ),
+  ls.parser.parse_snippet(
+    'zrun_length_encoding',
+    [[/// zt: Run Length Encoding
+/// Returns a vector run length encoded
+/// Vec<char>'aaaabbc' becomes vec![('a',4), ('b',2), ('c',1)]
+fn run_length_encoding<T: Eq + Default + Copy>(v: Vec<T>) -> Vec<(T, usize)> {
+    let mut ans: Vec<(T, usize)> = vec![];
+    let mut chr: T = Default::default();
+    let mut cnt: usize = 0;
+    for i in 0..v.len() {
+        if i == 0 || v[i] != chr {
+            if cnt > 0 {
+                ans.push((chr, cnt));
+            }
+            chr = v[i];
+            cnt = 0;
+        }
+        cnt += 1;
+    }
+    if cnt > 0 {
+        ans.push((chr, cnt));
+    }
+    ans
+}]]
+  ),
   -- basic function declaration
   -- i(1): name
   -- c(2): toggle between &self implementation or nothing
@@ -60,9 +126,10 @@ fn eratosthenes(cnt: usize) -> Vec<u64> {
     'prln',
     fmt(
       [[
-	println!("{}", <>);
+	println!("{<>}", <>);
 	  ]],
       {
+        i(2, ''),
         i(1, 'n'),
       },
       {
@@ -72,11 +139,12 @@ fn eratosthenes(cnt: usize) -> Vec<u64> {
   ),
   -- variable output
   s(
+    -- TODO: implement this with the Display trait in the template
     '>v', -- output [V]ector
     fmt(
       [[
 	let {} = {}.iter().map(|x| x.to_string()).collect::<Vec<String>>().join(" ");
-	println!("{{}}", {})
+	println!("{{}}", {});
 		]],
       { i(2, 'out'), i(1, 'nums'), rep(2) }
     )
