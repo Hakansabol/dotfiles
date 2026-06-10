@@ -60,20 +60,19 @@ fn freqmap<T: Eq + Hash>(v: &Vec<T>) -> std::collections::HashMap<&T, i32> {
 fn prime_factorization(n: i64) -> Vec<i64> {
     let mut v = vec![];
     let mut n = n;
-    while n & 1 == 0 {
-        n /= 2;
-        v.push(2);
-    }
-    let mut div = 3;
+    let mut div = 2;
     while n > 1 && div * div <= n {
         while n % div == 0 {
             n /= div;
             v.push(div);
         }
-        div += 2;
+        div = match div {
+            2 => 3,
+            div => div + 2,
+        };
+
     }
-    if n > 1 {
-        // catch prime factors bigger than sqrt(n)
+    if n > 1 { // catch prime factors bigger than sqrt(n)
         v.push(n);
     }
     v // return the vector as owned
