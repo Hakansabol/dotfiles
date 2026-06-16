@@ -1,4 +1,5 @@
 // This template is adapted from Naman Garg's <naman.rustp@gmail.com> at https://rustp.org/basic-programs/basic-template/
+// Functions prefixed with "/// zt..." are snippets and can be read in my dotfiles: https://github.com/Hakansabol/dotfiles/blob/main/nvim/lua/snips/snips_rust.lua
 #[rustfmt::skip]
 #[allow(clippy::all, unused)]
 mod template {

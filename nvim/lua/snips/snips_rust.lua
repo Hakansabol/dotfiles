@@ -43,6 +43,7 @@ fn eratosthenes(cnt: usize) -> Vec<u64> {
     [[/// zt: Frequency Map
 /// Generate a frequency map from a vector
 /// vec![1,1,3] becomes {1: 2, 3: 1}
+use std::hash::Hash;
 fn freqmap<T: Eq + Hash>(v: &Vec<T>) -> std::collections::HashMap<&T, i32> {
     let mut hm = std::collections::HashMap::new();
     for a in v {
