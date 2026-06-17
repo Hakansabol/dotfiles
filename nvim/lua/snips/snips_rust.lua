@@ -159,13 +159,4 @@ fn run_length_encoding<T: Eq + Default + Copy>(v: Vec<T>) -> Vec<(T, usize)> {
       { c(1, { fmt('mut {}', i(1)), i(1) }) }
     )
   ),
-  s(
-    'v',
-    fmt(
-      [[
-		let {} = {};
-		]],
-      { c(1, { i(1), fmt('mut {}', i(1)) }), i(2, '0') }
-    )
-  ),
 })
