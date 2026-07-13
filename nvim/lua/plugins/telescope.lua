@@ -42,6 +42,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
           '%.csproj', -- unity project files
           '%.meta', -- unity metadata files
           '%.asset', -- unity asset files
+          '%.svg', -- prevent a crash
+          '%.png', -- dont need
+          '%.jpg', -- dont need
+          '%.jpeg', -- dont need
+          '%.aseprite', -- dont need
         },
       },
     }
