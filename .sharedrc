@@ -43,6 +43,13 @@ nvmi() {
 	. /usr/share/nvm/init-nvm.sh
 }
 
+encin() {
+	gpg -ea | wl-copy -t text/plain
+}
+encout() {
+	wl-paste | gpg -d
+}
+
 cargadd() {
 	if [ $1 ]; then
 		if [ -f Cargo.toml ]; then

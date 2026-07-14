@@ -104,6 +104,37 @@ fn run_length_encoding<T: Eq + Default + Copy>(v: Vec<T>) -> Vec<(T, usize)> {
     ans
 }]]
   ),
+  ls.parser.parse_snippet(
+    'zgcd',
+    [[/// ztemplate: GCD via Stein's Algorithm
+/// Taken from: https://en.wikipedia.org/wiki/Binary_GCD_algorithm
+pub fn gcd(mut u: u128, mut v: u128) -> u128 {
+    if u == 0 {
+        return v;
+    } else if v == 0 {
+        return u;
+    }
+
+    let i = u.trailing_zeros();
+    u >>= i;
+    let j = v.trailing_zeros();
+    v >>= j;
+    let k = i.min(j);
+
+    loop {
+        debug_assert!(u % 2 == 1, "u = {} should be odd", u);
+        debug_assert!(v % 2 == 1, "v = {} should be odd", v);
+        if u > v {
+            (u, v) = (v, u);
+        }
+        v -= u;
+        if v == 0 {
+            return u << k;
+        }
+        v >>= v.trailing_zeros();
+    }
+}]]
+  ),
   -- basic function declaration
   -- i(1): name
   -- c(2): toggle between &self implementation or nothing
