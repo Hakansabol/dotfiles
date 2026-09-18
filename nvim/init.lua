@@ -77,6 +77,7 @@ require('lazy').setup {
   require 'plugins.telescope-luasnip',
   require 'plugins.leetcode',
   -- require 'plugins.image', -- commented: causing a crash when previewing image
+  require 'plugins.parinfer',
 
   -- Themes
   { 'dasupradyumna/midnight.nvim', lazy = false, priority = 1000 },

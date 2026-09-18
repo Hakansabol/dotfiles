@@ -7,7 +7,7 @@ sudo pacman --noconfirm -S xdg-desktop-portal-gnome niri ghostty rofi fuzzel aww
 # install neovim
 sudo pacman --noconfirm -S neovim gzip cmake make gcc ripgrep clang lua xclip wl-clipboard unzip nmap
 # install extras
-sudo pacman --noconfirm -S yazi zsh ffmpeg jq poppler fd ripgrep fzf zoxide xclip 7zip python python-pip man-db firefox fd starship
+sudo pacman --noconfirm -S yazi zsh ffmpeg jq poppler fd ripgrep fzf zoxide xclip 7zip python python-pip man-db firefox fd starship mpv
 sudo pacman --noconfirm -S alacritty kitty btop powertop ntp usbutils tree
 sudo pacman -S strawberry syncthing
 
