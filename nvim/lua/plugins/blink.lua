@@ -1,3 +1,7 @@
+if vim.g.vscode then
+  return {}
+end
+
 return { -- Autocompletion
   'saghen/blink.cmp',
   event = 'VimEnter',

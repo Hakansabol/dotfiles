@@ -3,7 +3,7 @@ sudo pacman --noconfirm -Sy sudo vi vim nano git linux-firmware dhcpcd networkma
 # install fonts
 sudo pacman --noconfirm -S noto-fonts noto-fonts-cjk otf-font-awesome
 # install niri
-sudo pacman --noconfirm -S xdg-desktop-portal-gnome niri ghostty rofi fuzzel awww libinput mako waybar xwayland-satellite sof-firmware xorg-server brightnessctl dialog font-manager fastfetch pulseaudio dolphin nautilus ark
+sudo pacman --noconfirm -S xdg-desktop-portal-gnome niri ghostty rofi fuzzel awww libinput mako waybar xwayland-satellite sof-firmware xorg-server brightnessctl dialog font-manager fastfetch dolphin nautilus ark pipewire pipewire-pulse
 # install neovim
 sudo pacman --noconfirm -S neovim gzip cmake make gcc ripgrep clang lua xclip wl-clipboard unzip nmap
 # install extras
@@ -15,6 +15,12 @@ sudo pacman -S strawberry syncthing
 sudo systemctl enable --now dhcpcd
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable ntpdate
+
+sudo systemctl enable --now --user pipewire
+sudo systemctl enable --now --user wireplumber
+sudo systemctl enable --now --user pipewire-pulse
+
+xdg-settings set default-web-browser firefox.desktop
 
 # link configurations one by one
 # TODO: link entire .config and git add individually

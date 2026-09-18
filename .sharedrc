@@ -54,6 +54,11 @@ encout() {
 	wl-paste | gpg -d
 }
 
+runhaskell() {
+	ghc --make -dynamic $1
+	./$(basename $1 .hs)
+}
+
 cargadd() {
 	if [ $1 ]; then
 		if [ -f Cargo.toml ]; then

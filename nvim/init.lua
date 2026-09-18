@@ -85,6 +85,8 @@ require('lazy').setup {
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 }
 
+vim.lsp.enable 'gleam'
+
 -- PLUGIN SETUP
 require 'lsp.roslyn'
 
@@ -108,3 +110,4 @@ require('luasnip.loaders.from_lua').load { paths = '~/snips/snips_rust_basics.lu
 -- THEME
 vim.cmd.colorscheme 'gruvbox'
 -- vim.cmd 'hi Normal guibg=#000000'
+vim.cmd 'hi NormalNC guibg=#000000'

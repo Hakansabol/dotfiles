@@ -23,6 +23,7 @@ https://dotnet.microsoft.com/en-us/download
 
 2. Install roslyn lsp via Mason
 ```:MasonInstall roslyn```
+```sudo pacman -S dotnet-sdk```
 
 3. Open a `.cs` file. Test and debug via `:LspInfo` and/or `:LspLog`
 

@@ -105,6 +105,20 @@ fn run_length_encoding<T: Eq + Default + Copy>(v: Vec<T>) -> Vec<(T, usize)> {
 }]]
   ),
   ls.parser.parse_snippet(
+    'zmodular_pow_exponentiation',
+    [[/// ztemplate: Modular Exponentiation
+fn mod_pow(n: i64, pow: i64, modulo: i64) -> i64 {
+    (0..(63 - pow.leading_zeros())).rev().fold(n, |x, i| {
+        if pow & (1 << i) == 0 {
+            x * x % modulo
+        } else {
+            (x * x % modulo) * n % modulo
+        }
+    })
+}
+]]
+  ),
+  ls.parser.parse_snippet(
     'zgcd',
     [[/// ztemplate: GCD via Stein's Algorithm
 /// Taken from: https://en.wikipedia.org/wiki/Binary_GCD_algorithm

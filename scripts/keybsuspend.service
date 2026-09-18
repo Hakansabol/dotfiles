@@ -1,0 +1,12 @@
+[Unit]
+Description=Turn off autosuspend for USB keyboard device
+After=powertop.service
+
+[Service]
+Type=oneshot
+ExecStart=echo 'on' > '/sys/bus/usb/devices/3-4.3/power/control'
+
+[Install]
+WantedBy=multi-user.target
+
+
